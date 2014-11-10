@@ -24,7 +24,7 @@ The following steps assume that you are either using Virtualbox or have purchase
 2. Download and install Virtualbox if you haven't already done so. [Virtualbox.org](https://www.virtualbox.org/wiki/Downloads)
   * If you are using VMware then you do NOT need to install Virtualbox and can skip this step.
 
-3. Download the THA [Vagrantfile](https://github.com/madsec/tha-lab_setup/raw/master/assets/Vagrantfile).
+3. Download the THA [Vagrantfile](https://raw.githubusercontent.com/madsec/the-lab_setup/master/assets/Vagrantfile).
 
 4. Move the Vagrantfile to a directory you will use to store your lab VMs.
 
