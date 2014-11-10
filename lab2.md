@@ -1,5 +1,5 @@
 #### Instructions
-1. Now that you are comfortable with launching and shutting down your Kali VM feel free to familiarize yourself with the rest of our lab VMs:
+Now that you are comfortable with launching and shutting down your Kali VM feel free to familiarize yourself with the rest of our lab VMs:
 
 **Vulnerable Client**
 
@@ -26,8 +26,8 @@
   ```
 
 ##### Notes
-* The first time you issue the `vagrant up` command for a new VM you will be downloading a rather large file so be aware of the disk space requirements. 
+  * The first time you issue the `vagrant up` command for a new VM you will be downloading a rather large file so be aware of the disk space requirements. 
 
-* Each of the VMs we offer are already configured to be networked together as required to complete our labs so understand that changing any network settings on the labs may break the functionality.
+  * Each of the VMs we offer are already configured to be networked together as required to complete our labs so understand that changing any network settings on the labs may break the functionality.
 
-2. This concludes this block of instruction.
+This concludes this block of instruction.
