@@ -8,7 +8,7 @@ http://hackeracademy.com
 This lab will walk you through the steps required to set up the local testing environment required to complete the labs found at hackeracademy.com
 
 #### Requirements
-This lab requires the following applications to be installed on your laptop/desktop
+This lab requires the following software and hardware:
 * One of the following: Virtualbox 4.3+,  VMWare Fusion 5.x+, VMWare Workstation 9+ 
 * Vagrant
 * Dual core CPU or better
