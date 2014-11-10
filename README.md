@@ -16,8 +16,8 @@ This lab requires the following applications to be installed
 The THA lab environment supports Virtualbox and VMware has been tested with Windows, OS X, and Linux hosts.
 
 ##### NOTE
-__Using VMware with Vagrant requires the purchase of a plugin from the developers of Vagrant so if you plan on using VMware to complete your THA labs you must first purchase the [plugin](https://www.vagrantup.com/vmware).
-The following steps assume that you are either using Virtualbox or have purchased and installed the VMware plugin from hashicorp.__
+*Using VMware with Vagrant requires the purchase of a plugin from the developers of Vagrant so if you plan on using VMware to complete your THA labs you must first purchase the [plugin](https://www.vagrantup.com/vmware).
+The following steps assume that you are either using Virtualbox or have purchased and installed the VMware plugin from hashicorp.*
 
 1. Download and install Vagrant from [here](https://www.vagrantup.com/downloads.html).
 
