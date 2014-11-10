@@ -32,7 +32,7 @@ The following steps assume that you are either using Virtualbox or have purchase
 
 4. Download the THA [Vagrantfile](https://raw.githubusercontent.com/madsec/the-lab_setup/master/assets/Vagrantfile) to a local folder on your system with plenty of storage space.
 
-5. Move the Vagrantfile to a directory you will use to store your lab VMs.
+5. Move the Vagrantfile to a directory with enough storage space to store/run your lab VMs.
 
 6. Open a terminal and make sure you're in the same directory as the Vagrantfile, then launch your Kali VM by entering the following command:
 
