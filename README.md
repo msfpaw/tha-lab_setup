@@ -34,7 +34,7 @@ The following steps assume that you are either using Virtualbox or have purchase
   vagrant up kali
   ```
 
-* The above command will download the Kali VM and launch it via Virtualbox.
+  * The above command will download the Kali VM and launch it via Virtualbox.
 
 6. Clone this repo on your Kali VM by opening a terminal and issuing the following command from the Kali VM:
 
