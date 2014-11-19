@@ -4,19 +4,19 @@ Now that you are comfortable with launching and shutting down your Kali VM feel 
 **Vulnerable Client**
 
   ```
-  vagrant up vuln-client
+  vagrant up client
   ```
 
 **Vulnerable Server**
 
   ```
-  vagrant up vuln-server
+  vagrant up web
   ```
 
 **Network Emulator**
 
   ```
-  vagrant up NetEmu
+  vagrant up net
   ```
 
 **Metasploitable**
