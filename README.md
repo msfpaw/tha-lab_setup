@@ -27,18 +27,21 @@ The following steps assume that you are either using Virtualbox or have purchase
 2. Download and install Virtualbox if you haven't already done so. [Virtualbox.org](https://www.virtualbox.org/wiki/Downloads)
   * If you are using VMware then you do NOT need to install Virtualbox and can skip this step.
 
-3. Download the THA [Vagrantfile](https://raw.githubusercontent.com/madsec/vagrant-vms/master/Vagrantfile) to a local folder on your system with plenty of storage space.
+3. Right click the THA [Vagrantfile](https://raw.githubusercontent.com/madsec/vagrant-vms/master/Vagrantfile) and save with the name `Vagrantfile` without any file extension. 
+  * Windows may try to add the .sdx extnesion to the Vagrantfile, if it does simply remove the extension.
+  * Failure to name the Vagrantfile properly (with no extension) will prevent your VMs from working.
 
-4. Move the Vagrantfile to a directory with enough storage space to store/run your lab VMs.
-
-5. Open a terminal and make sure you're in the same directory as the Vagrantfile, then launch your Kali VM by entering the following command:
+4. Open a terminal and make sure you're in the same directory as the Vagrantfile, then launch your Kali VM by entering the following command:
 
   ```bash
   vagrant up kali
   ```
 
-  * The above command will download the Kali VM and launch it via Virtualbox.
-  * If you are using vmware and the vmware vagrant plugin, you may need to run "vagrant up kali --provider=vmware_fusion" or "vagrant up --provider=vmware_workstation" instead
+  * If you are using vmware and the vmware vagrant plugin, you may need to run `vagrant up kali --provider=vmware_fusion` or `vagrant up --provider=vmware_workstation` instead
+
+5. The first time you run the `vagrant up` command it will download the Kali VM (wich can be quite large) and launch it via Virtualbox.
+  * In Windows the VM image is typically stored in the users home directory.
+  * In Linux/OSX the VM image is stored in `~/.vagrant.d`.
 
 6. Inside your Kali VM, open a new terminal and issue the following commands to create a directory to hold the THA lab information and to clone this repository into it:
 
@@ -50,7 +53,7 @@ The following steps assume that you are either using Virtualbox or have purchase
 * If the Kali VM network connection continually disconnects, simply reboot the VM.
 
 #### Start the lab
-* Follow the instructions for lab 1 found on your Kali machine at 
+* Use the `Leafpad` application to open and follow the instructions for lab 1 found on your Kali machine at 
   ```
   /root/THA/setup/lab1.md
   ```
