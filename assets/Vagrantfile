@@ -5,44 +5,47 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure("2") do |config|
+
+### KALI
   config.vm.define "kali", primary: true do |kali|
     kali.vm.network "private_network", ip: "172.16.189.5", :adapter => 2, :mac => "080027f34a5d"
     kali.vm.box = "blackfin/kali"
+    
     kali.vm.provider "virtualbox" do |vb|
       vb.gui = true
     end
 
-  kali.vm.provider "vmware_workstation" do |vmware|
-    vmware.gui = true
-  end
+    kali.vm.provider "vmware_workstation" do |vmware|
+      vmware.gui = true
+    end
 
     kali.vm.provider "vmware_desktop" do |vmware|
-    vmware.gui = true
+      vmware.gui = true
+    end
   end
 
-end
-
-config.vm.define "client", autostart: false do |client|
-  client.vm.box = "blackfin/vuln-client"
-  config.ssh.password  = "vagrant"
-  config.ssh.username = "vagrant"
-  client.vm.network "private_network", ip: "172.16.189.52", :mac => "080027958870", :adapter => 2 
+### VULNERABLE CLIENT
+  config.vm.define "client", autostart: false do |client|
+    client.vm.box = "blackfin/vuln-client"
+    config.ssh.password  = "vagrant"
+    config.ssh.username = "vagrant"
+    client.vm.network "private_network", ip: "172.16.189.52", :mac => "080027958870", :adapter => 2 
  
- config.vm.provider "virtualbox" do |vb|
-    vb.gui = true
+    config.vm.provider "virtualbox" do |vb|
+      vb.gui = true
+    end
+ 
+    config.vm.provider "vmware_workstation" do |vmware|
+      vmware.gui = true
+    end
+
+    config.vm.provider "vmware_desktop" do |vmware|
+      vmware.gui = true
+    end
   end
- 
- config.vm.provider "vmware_workstation" do |vmware|
-    vmware.gui = true
- end
 
-  config.vm.provider "vmware_desktop" do |vmware|
-    vmware.gui = true
- end
-
-end
-
-config.vm.define "web", autostart: false do |web|
+### VULNERABLE SERVER
+  config.vm.define "web", autostart: false do |web|
     config.ssh.password  = "vagrant"
     config.ssh.username = "vagrant"
     web.vm.network "private_network", ip: "172.16.189.100", :mac => "080027658BC4", :adapter => 2 
@@ -59,9 +62,9 @@ config.vm.define "web", autostart: false do |web|
     web.vm.provider "vmware_desktop" do |vmware|
       vmware.gui = true
     end
-
   end
-  
+
+### NETWORK EMULATOR
   config.vm.define "net", autostart: false do |net|
     net.vm.network "private_network", ip: "172.16.189.241", :mac => "080027EAD414", :adapter => 2 
     config.vm.synced_folder '.', '/vagrant', disabled: true
@@ -79,13 +82,12 @@ config.vm.define "web", autostart: false do |web|
     net.vm.provider "vmware_desktop" do |vmware|
       vmware.gui = true
     end
-
   end
-  
+
+### METASPLOITABLE
   config.vm.define "metasploitable", autostart: false do |metasploitable|
-  config.ssh.password  = "vagrant"
-  config.ssh.username = "vagrant"
-  
+    config.ssh.password  = "vagrant"
+    config.ssh.username = "vagrant"  
     metasploitable.vm.box = "blackfin/metasploitable"
     metasploitable.vm.network "private_network", ip: "172.16.189.131", :adapter => 2
     
@@ -93,13 +95,12 @@ config.vm.define "web", autostart: false do |web|
       vb.gui = true
     end
     
-  metasploitable.vm.provider "vmware_workstation" do |vmware|
-    vmware.gui = true
-  end
+    metasploitable.vm.provider "vmware_workstation" do |vmware|
+      vmware.gui = true
+    end
   
     metasploitable.vm.provider "vmware_desktop" do |vmware|
-    vmware.gui = true
+      vmware.gui = true
+    end
   end
-end
-
 end
