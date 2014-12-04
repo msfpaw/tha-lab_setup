@@ -27,7 +27,7 @@ The following steps assume that you are either using Virtualbox or have purchase
 2. Download and install Virtualbox if you haven't already done so. [Virtualbox.org](https://www.virtualbox.org/wiki/Downloads)
   * If you are using VMware then you do NOT need to install Virtualbox and can skip this step.
 
-3. Right click the THA [Vagrantfile](https://raw.githubusercontent.com/madsec/vagrant-vms/master/Vagrantfile) and `save as` with the name `Vagrantfile` without any file extension. 
+3. Right click the THA [Vagrantfile](https://raw.githubusercontent.com/madsec/tha-lab_setup/master/assets/Vagrantfile) and `save as` with the name `Vagrantfile` without any file extension. 
   * Windows may try to add the .sdx extension to the Vagrantfile, if it does simply remove the extension.
   * Failure to name the Vagrantfile properly (with no extension) will prevent your VMs from working.
 
