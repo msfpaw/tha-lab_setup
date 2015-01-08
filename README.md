@@ -23,6 +23,7 @@ The THA lab environment supports Virtualbox and VMware Fusion/Workstation has be
 The following steps assume that you are either using Virtualbox or have purchased and installed the VMware plugin from Hashicorp.*
 
 1. Download and install Vagrant from [here](https://www.vagrantup.com/downloads.html).
+  * Be sure to install Vagrant version 1.7.2 or newer to avoid any issues.
 
 2. Download and install Virtualbox if you haven't already done so. [Virtualbox.org](https://www.virtualbox.org/wiki/Downloads)
   * If you are using VMware then you do NOT need to install Virtualbox and can skip this step.
