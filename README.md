@@ -40,7 +40,7 @@ The following steps assume that you are either using Virtualbox or have purchase
 
   * If you are using vmware and the vmware vagrant plugin, you may need to run `vagrant up kali --provider=vmware_fusion` or `vagrant up --provider=vmware_workstation` instead
 
-5. The first time you run the `vagrant up` command it will download the Kali VM (wich can be quite large) and launch it via Virtualbox.
+5. The first time you run the `vagrant up` command it will download the Kali VM (which can be quite large) and launch it via Virtualbox.
   * In Windows the VM image is typically stored in the users home directory.
   * In Linux/OSX the VM image is stored in `~/.vagrant.d`.
 
