@@ -128,27 +128,28 @@ Vagrant.configure("2") do |config|
   end
 
 ### WINDOWS XP (provided by modern.ie)
-  config.vm.define "winxp", autostart: false do |winxp|
   config.vm.boot_timeout = 30
+  config.vm.define "winxp", autostart: false do |winxp|
     winxp.vm.box = "http://aka.ms/vagrant-xp-ie8"
     winxp.vm.communicator = "winrm"
     
     winxp.vm.provider "virtualbox" do |vb|
       vb.gui = true
-      vb.customize ["modifyvm", :id, "--natnet1", "172.16.189.0/24"]
+      vb.customize ["modifyvm", :id, "--nic2", "hostonly"]
+      vb.customize ["modifyvm", :id, "--hostonlyadapter2", "vboxnet0"]
     end
   end
 
 ### WINDOWS 7 (provided by modern.ie)
-  config.vm.define "win7", autostart: false do |win7|
   config.vm.boot_timeout = 30
+  config.vm.define "win7", autostart: false do |win7|
     win7.vm.box = "http://aka.ms/vagrant-win7-ie11"
     win7.vm.communicator = "winrm"
     
     win7.vm.provider "virtualbox" do |vb|
-      vb.gui = true      
-      vb.customize ["modifyvm", :id, "--natnet1", "172.16.189.0/24"]
-
+      vb.gui = true
+      vb.customize ["modifyvm", :id, "--nic2", "hostonly"]
+      vb.customize ["modifyvm", :id, "--hostonlyadapter2", "vboxnet0"]
     end
   end
 
